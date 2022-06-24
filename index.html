@@ -16,17 +16,26 @@
 
     <body>
         <div id="app">
-            <ul>
-                <!--print by vue-->
-                <li v-for="album in albums">
-                    <img :src="album.poster" alt="album cover">
-                    <h3>{{album.title}}</h3>
-                    <h4>{{album.author}}</h4>
-                    <h4>{{album.genre}}</h4>
-                    <h4>{{album.year}}</h4>
-                </li>
-                <!--/print by vue-->
-            </ul>
+            <header>
+                <div class="header_box">
+                    <img src="img/spotify-logo.png" alt="logo">
+                </div>
+            </header>
+            <main>
+                <div class="main_container">
+                    <ul>
+                        <!--print by vue-->
+                        <li class="album" v-for="album in albums">
+                            <img :src="album.poster" alt="album cover">
+                            <h4>{{album.title}}</h4>
+                            <h5>{{album.author}}</h5>
+                            <h5>{{album.genre}}</h5>
+                            <h5>{{album.year}}</h5>
+                        </li>
+                        <!--/print by vue-->
+                    </ul>
+                </div>
+            </main>
         </div>
         <script src="js/main.js"></script>
     </body>

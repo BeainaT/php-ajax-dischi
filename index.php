@@ -15,15 +15,28 @@ require_once './server/database.php';
     </head>
 
     <body>
-        <!-- print disks in HTML -->
-        <?php foreach($database as $key => $album) : ?>
-            <img <?= "src=$album[poster]" ?> />
-            <h3><?= $album['title']?></h3>
-            <h4><?= $album['author']?></h4>
-            <h4><?= $album['genre']?></h4>
-            <h4><?= $album['year']?></h4>
-        <?php endforeach; ?>
-        <!-- /print disks in HTML -->
+    <header>
+        <div class="header_box">
+            <img src="img/spotify-logo.png" alt="logo">
+        </div>
+        </header>
+        <main>
+            <div class="main_container">
+                <ul>
+                    <!-- print disks in HTML -->
+                    <?php foreach($database as $key => $album) : ?>
+                        <li class="album">
+                            <img <?= "src=$album[poster]" ?> />
+                            <h4><?= $album['title']?></h4>
+                            <h5><?= $album['author']?></h5>
+                            <h5><?= $album['genre']?></h5>
+                            <h5><?= $album['year']?></h5>
+                        </li>
+                        <?php endforeach; ?>
+                        <!-- /print disks in HTML -->
+                </ul>
+            </div>
+        </main>
     </body>
 
 </html>
