@@ -6,10 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vue-PHP Disks</title>
+        <!--axios-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!--vue js-->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!--my css-->
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-
+        <div id="app">
+            <ul>
+                <!--print by vue-->
+                <li v-for="album in albums">
+                    <img :src="album.poster" alt="album cover">
+                    <h3>{{album.title}}</h3>
+                    <h4>{{album.author}}</h4>
+                    <h4>{{album.genre}}</h4>
+                    <h4>{{album.year}}</h4>
+                </li>
+                <!--/print by vue-->
+            </ul>
+        </div>
         <script src="js/main.js"></script>
     </body>
 
