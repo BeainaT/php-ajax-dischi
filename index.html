@@ -19,6 +19,11 @@
             <header>
                 <div class="header_box">
                     <img src="img/spotify-logo.png" alt="logo">
+                    <select name="genre" id="" v-model="select" @change="filterGenre()">
+                        <option disabled value="">Select your genre</option>
+                        <option value="all">All</option>
+                        <option :value="genre" v-for="genre in genres">{{genre}}</option>
+                    </select>
                 </div>
             </header>
             <main>
