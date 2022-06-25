@@ -18,6 +18,10 @@ require_once './server/database.php';
     <header>
         <div class="header_box">
             <img src="img/spotify-logo.png" alt="logo">
+            <select>
+                <option value="">No choice available here</option>
+                <option disabled value="">Sorry</option>
+            </select>
         </div>
         </header>
         <main>

@@ -31,6 +31,9 @@ h4 {
 h5 {
     color: var(--text_secondary);
 }
+select:focus {
+    outline: none;
+}
 /*CONTAINERS AND COMMONS*/
 /*header*/
 header {
@@ -38,17 +41,26 @@ header {
 }
 .header_box {
     padding: .625rem;
-    display: flex; /*doesn't work*/
-    justify-content: space-between; /*doesn't work*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .header_box img {
     width: 3.125rem;
+}
+select {
+    border: 2px solid var(--text_secondary);
+    background-color: var(--main_bg_color);
+    color: var(--text_secondary);
+    border-radius: 1.875rem;
+    padding: .625rem;
+    width: 12.5rem;
 }
 /*main*/
 main {
     background-color: var(--main_bg_color);
     padding: 30px 0;
-    height: calc(100vh - 3.9063rem); /*doesn't work*/
+    height: calc(100vh - 3.8125rem);
 
 }
 .main_container {
